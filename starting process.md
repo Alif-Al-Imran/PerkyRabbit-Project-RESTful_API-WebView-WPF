@@ -9,3 +9,8 @@ Step 6: Run project WPF to start the application and perform CRUD operations.
 Note: The project database is code first basis. You will need to use entity framwork and migration commands to create database.
 All features: 3 relational tables, 1 table for admin login. RESTful api of data view, search, create, update, delete. Webview of login, registration with views of own created api.
 WPF application with CRUD operations and gridview of the entire table using own created api. The api project uses repository pattern and dependency injection.
+
+Packages installed:
+Microsoft.aspnet.webapi.cors
+Microsoft.aspnet.webapi.client
+Entity.Framework
