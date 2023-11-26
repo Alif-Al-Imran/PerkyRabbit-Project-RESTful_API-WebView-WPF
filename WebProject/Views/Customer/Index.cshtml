@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebProject.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Customer panel</h2>
+<input type="button" id="GetallData" value="Get All Data" class="btn btn-info" onclick="showTable()" />
+<a href="/customer/search" class="btn btn-info">Search</a>
+<br />
+<table class="table" id="table" style="display:none;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Index") |
+                @Html.ActionLink("Details", "Index") |
+                @Html.ActionLink("Delete", "Index")
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+    function showTable()
+    {
+        var x = document.getElementById("table");
+        x.style.display = "block";
+    }
+</script>

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index Page";
+}
+
+<div class="jumbotron">
+    <h1>Perky Rabbit Code Test</h1>
+    <p class="lead"></p><br /><br />
+    <p>
+        <a href="/home/login" class="btn btn-primary btn-lg">Log in &raquo;</a>
+        <a href="/home/registration" class="btn btn-primary btn-lg">Registration &raquo;</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2 style="color:green">Getting started</h2>
+        <p style="color:green">
+            Log in to view the relational table data. Register if not already existing user.
+        </p>
+
+    </div>
+
+</div>
+<p>@TempData["msg"]</p>
